@@ -1,0 +1,33 @@
+.panel {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+/* *{
+  font-size: 1.1rem;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+}
+
+.tab {
+  display: flex;
+  margin-right: 1rem;
+  background-color: #f0f0f0;
+  width: 70px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  transition: .4s;
+}
+
+.tab:hover {
+  background-color:dimgray;
+  color: white;
+  transition: .4s;
+  cursor: pointer;
+} */
