@@ -5,9 +5,51 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1.3rem;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.FilterableProductTable {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid grey;
+  width: 310px;
+  padding: 2rem;
+}
+
+.SearchBar {
+  display: flex;
+  flex-direction: column;
+  padding: 0.7rem;
+}
+
+.SearchBar input{
+  font-size: 1.3rem;
+}
+
+
+table {
+  /* border: 1px solid black; */
+  width: 100%;
+
+}
+
+td {
+  width: 50%;
+}
+
+.ProductCategoryRow {
+  font-weight: 700;
+  text-align: center;
+}
+
+
+.notInStock {
+  color: red;
 }
