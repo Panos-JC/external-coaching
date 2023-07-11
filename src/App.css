@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #DBDBDB;
+}
+
+.card {
+    background-color: #fff;
+    width: 608px;
+    height: 438.9px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 2rem;
+    border-bottom-right-radius: 150px;
+}
+
+.inputs {
+    height: 20%;;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input {
+    font-size: 1.5rem;
+    border: 1px solid #dbdbdb;
+    width: 6rem;
+    height: 2.5rem;
+    padding: 15px;
+    border-radius: 6px;
+    transition: .2s;
+    font-family: 'Poppins';
+}
+
+input:focus, input:active {
+    border: 1px solid #854dff !important;
+    outline: none;
+    transition: .2s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+label {
+    margin-bottom: 0.3rem;
+    font-family: 'Poppins';
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #716f6f;
+    letter-spacing: 2px;
+}
+
+hr {
+    margin-bottom: 1rem;
+    height: 1px !important;
+    width: 100%;
+    background-color: #DBDBDB !important;
+    border: none;
+}
+
+.divider {
+    height: 22%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    color: #854dff;
+    font-size: 5.3rem;
+    transition: .3s;
+}
+
+.icon:hover {
+    cursor: pointer;
+    font-size: 5.6rem;
+    transition: .3s;
+}
+
+span {
+    color: #854dff;
+}
+
+.result h1 {
+    font-family: 'Poppins';
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: -10px;
+    margin-top: -10px;
+    font-style: italic;
+}
