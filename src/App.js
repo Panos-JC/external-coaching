@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { PiArrowCircleDownFill } from 'react-icons/pi';
 
@@ -16,18 +16,25 @@ function App() {
   // Handle input changes
   const handleDayChange = (e) => {
     setDay(e.target.value);
-    console.log("day: " + day);
+    // console.log("day: " + day);
   }
 
   const handleMonthChange = (e) => {
     setMonth(e.target.value);
-    console.log("month: " + month);
+    console.log("month: " + e.target.value);
   }
 
   const handleYearChange = (e) => {
     setYear(e.target.value);
     console.log("year: " + year);
   }
+
+  useEffect(
+    () => {
+      console.log("day: " + day);
+    },
+    [day]
+  )
 
   const calculateAge = () => {
     // Get current day, month and year
@@ -48,6 +55,7 @@ function App() {
   
   return <>
   <div className="App">
+    
     <div className="card">
       <div className="inputs">
           <div className="container">
