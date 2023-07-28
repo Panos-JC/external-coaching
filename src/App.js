@@ -1,13 +1,20 @@
 import { useState } from "react";
 import "./App.css";
 import Layout from "./Layout";
-import Main from "./Main";
-import MainNavigation from "./MainNavigation";
-import Sidebar from "./Sidebar";
+
+import { UserContext } from "./context";
 
 function App() {
+  const [user, setUser] = useState({
+    firstName: "Anastasia",
+    lastName: "Boublini",
+    username: "aboublini",
+  });
+
   return (
-    <Layout Main={Main} MainNavigation={MainNavigation} Sidebar={Sidebar} />
+    <UserContext.Provider value={user}>
+      <Layout />
+    </UserContext.Provider>
   );
 }
 

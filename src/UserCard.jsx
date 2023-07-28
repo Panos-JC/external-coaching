@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import "./App.css";
+import { UserContext } from "./context";
 
 const UserCard = () => {
+  const { firstName, lastName, username } = useContext(UserContext);
+
   return (
     <div className="user-card">
       <img
@@ -9,8 +13,8 @@ const UserCard = () => {
         alt="User Avatar"
       />
       <div className="user-info">
-        <p className="full-name">{`${"firstName"} ${"lastName"}`}</p>
-        <p className="username">@{"username"}</p>
+        <p className="full-name">{`${firstName} ${lastName}`}</p>
+        <p className="username">@{username}</p>
       </div>
     </div>
   );

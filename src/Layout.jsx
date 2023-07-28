@@ -1,6 +1,9 @@
 import "./App.css";
+import Main from "./Main";
+import MainNavigation from "./MainNavigation";
+import Sidebar from "./Sidebar";
 
-const Layout = ({ Sidebar, Main, MainNavigation }) => {
+const Layout = () => {
   return (
     <>
       <header class="main-menu">

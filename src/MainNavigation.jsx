@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import "./App.css";
+import { useUserContext } from "./context";
 
 const MainNavigation = () => {
+  const { username } = useUserContext();
   return (
     <>
       <ul>
@@ -17,7 +20,7 @@ const MainNavigation = () => {
           <a href="#">Contact</a>
         </li>
       </ul>
-      <div>@username</div>
+      <div>@{username}</div>
     </>
   );
 };
