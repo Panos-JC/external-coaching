@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*{
+    font-family: 'Space Mono';
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #c4e4e7;
+}
+
+.card {
+    background-color: #fff;
+    width: 1000px;
+    height: 400px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.inputs {
+    width: 49%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.results {
+    background-color: #00494d;
+    width: 50%;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.box h3{
+    margin-bottom: 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+.box p {
+    margin-top: 0;
+    color: #7da2a4;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.box h1 {
+    color: #26c0ab;
+}
+
+.rst-btn {
+    background-color: #487b7e;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+    margin-top: 5rem;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    color: #3d5b5d;
+    border: none;
+    font-weight: 700;
+}
+
+.bill, .people {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.bill-cont, .people-cont {
+    display: flex;
+    flex-direction: row;
+    background-color: #f4fafa;
+    border-radius: 5px;
+    justify-content: space-between;
+    height: 40px;
+    cursor: pointer;
+}
+
+.bill h3, .people h3, .tip h3{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #808090;
+}
+
+.bill-inpt, .people-inpt {
+    border: transparent;
+    background-color: #f4fafa;
+    width: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.bill-inpt:focus, .bill-inpt:active, .custom-tip:focus, .custom-tip:active, .people-inpt:focus, .people-inpt:active{
+    outline: none;
+}
+
+.icon {
+    color: #9ebbbd;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.7rem;
+}
+
+.tip-selection {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.default-tip {
+    background-color: #00494d;
+    color: #fff;
+    border: none;
+    width: 135px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.default-tip:hover {
+    background-color: #26c0ab;
+}
+
+.custom-tip {
+    background-color: #f4fafa;
+    color: #536d6a;
+    border: none;
+    width: 135px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+}
