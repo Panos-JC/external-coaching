@@ -10,7 +10,6 @@ function App() {
   const [bill, setBill] = useState(0);
   const [tip, setTip] = useState(0);
   const [people, setPeople] = useState(0);
-  const [customTip, setCustomTip] = useState("");
 
   const handleBillChange = (e) => {
     setBill(e.target.value);
@@ -27,36 +26,33 @@ function App() {
     console.log("Tip: " + percentage);
   }
 
-  const handleCustomTip = (e) => {
-    setTip(e.target.value);
-    setCustomTip(e.target.value);
-    console.log("Tip: " + e.target.value);
-  }
-
   const handleReset = () => {
     setTipPerson(0);
     setTotalPerson(0);
     setBill(0);
     setTip(0);
     setPeople(0);
-    setCustomTip("");
   }
 
   // Everytime there is a change in bill tip and people do calculations
   useEffect(() => {
     setTipPerson((bill * tip) / 100);
-    setTotalPerson((bill/people) + (bill * tip) / 100);
+    if (people !== 0) { // This way we handle NaN in total per person
+      setTotalPerson((bill/people) + (bill * tip) / 100);
+    } else {
+      setTotalPerson(0);
+    }
+    
   }, [bill, tip, people]);
 
-  // Refresk
+  // Refresh
   useEffect(() => {
-    setTipPerson(0);
-    setTotalPerson(0);
-    setBill(0);
-    setTip(0);
-    setPeople(0);
-    setCustomTip("");
+    handleReset();
   }, []);
+
+  useEffect(() => {
+    console.log(totalPerson);
+  }, [totalPerson]);
 
   return <div className="App">
     <div className="card">
@@ -82,7 +78,7 @@ function App() {
            <div className="tip-selection">
             <button className="default-tip" onClick={() => handleTip(25)}>25%</button>
             <button className="default-tip" onClick={() => handleTip(50)}>50%</button>
-            <input className="custom-tip" type="number" min="0" placeholder="Custom" value={customTip} onChange={handleCustomTip}></input>
+            <input className="custom-tip" type="number" min="0" placeholder="Custom"  onChange={(e) => handleTip(e.target.value)}></input>
            </div>
         </div>
 
@@ -114,7 +110,7 @@ function App() {
             <p>/ person</p>
           </div>
           <div className="right">
-            <h1>${totalPerson}</h1>
+            <h1>${totalPerson === Infinity ? 0 : totalPerson}</h1>
           </div>
         </div>
         
