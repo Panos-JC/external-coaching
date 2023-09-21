@@ -22,7 +22,6 @@ function Home() {
   
     return <div className="App">
   
-  
         {data.map(({title, body, id}) => (
           <Card
             title={title}

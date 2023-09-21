@@ -6,7 +6,7 @@ function Card({title, text, id}) {
     <div className="card">
       <h2 className="title">{title}</h2>
       <p className="content">{text}</p>
-      <Link to={`/post/${id}`}><button className="btn">View post</button></Link>
+      <Link to={`/post/${id}`}><button className="btn">View comments</button></Link>
     </div>
     );
 };
