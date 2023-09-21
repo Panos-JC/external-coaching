@@ -30,3 +30,7 @@
     border: none;
     font-weight: bold;
 }
+
+.btn:hover {
+    cursor: pointer;
+}
