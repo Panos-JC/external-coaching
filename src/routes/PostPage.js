@@ -52,9 +52,24 @@ function PostPage() {
       },
       []
     );
-  
+
+      // Function that returns the username of the user based on userId
+    const findUsername = (array, id) => {
+      const user = array.find((user) => user.id === id);
+      return user ? user.username : 'Unknown user';
+    }
+
+    // Function that returns the username of the user based on userId
+    const findFullname = (array, id) => {
+      const user = array.find((user) => user.id === id);
+      return user ? user.name : 'Unknown name';
+    }
+
+
     return <div className="App">
           <Card
+            fullname={findFullname(users, post.id)}
+            username={findUsername(users, post.id)}
             title={post.title}
             text={post.body}
             id={post.id}
@@ -63,7 +78,7 @@ function PostPage() {
             <h2>Comments for this post:</h2>
             {comment.map((item) => 
               <Comment
-                username={users.find((user) => user.email === item.email)}
+                username={'usernameee'}
                 name={item.name}
                 mail={item.email}
                 body={item.body}
