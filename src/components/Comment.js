@@ -1,8 +1,6 @@
 import "../routes/App.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { AiOutlineHeart, AiOutlineInfoCircle } from 'react-icons/ai';
-import { FaRegComment } from 'react-icons/fa';
 import { MdVerified, MdArrowForwardIos } from 'react-icons/md';
 
 function Comment({name, mail, body}) {

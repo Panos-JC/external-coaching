@@ -7,11 +7,12 @@ import { FaRegComment } from 'react-icons/fa';
 import { MdVerified, MdArrowForwardIos } from 'react-icons/md';
 
 
-function Card({title, text, id, username, fullname, num, isHome}) {
+function Card({title, text, id, username, fullname, num, isHome, userId}) {
     return (
     <div className="card">
 
       <div className='user-info'>
+      
         <div className='username'>
             <div className='icon'>
                 <div className='circle'>
@@ -21,11 +22,15 @@ function Card({title, text, id, username, fullname, num, isHome}) {
 
             <div className='info'>
                 <div className='text'>
+                <Link to={`/user/${userId}`}>
                     <p className='header'>{fullname}<MdVerified className="verified"/></p>
                     <p className='sub-header'>@{username}</p>
+                </Link>
                 </div>
             </div>
         </div>
+        
+
         <div className='twitter-logo'>
             <FontAwesomeIcon className="twitter-right" icon={faTwitter}/>
         </div>

@@ -74,6 +74,7 @@ function PostPage() {
             text={post.body}
             id={post.id}
             num = {comment.length}
+            userId={post.userId}
           />
           <div className="comments-section">
             {comment.map((item) => 

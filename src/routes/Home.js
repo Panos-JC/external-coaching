@@ -55,6 +55,7 @@ function Home() {
             text={body}
             id={id}
             isHome={true}
+            userId={userId}
           />
           ))}
     </div>;
