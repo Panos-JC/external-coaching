@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.card{
+.card {
     width: 800px;
     height: 300px;
     margin-top: 20px;
@@ -204,4 +204,17 @@ a {
     text-decoration: none;
     color: inherit;
     width: 100%;
+}
+
+.comment-card {
+    width: 650px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eaf9ff;
 }

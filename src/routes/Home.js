@@ -54,6 +54,7 @@ function Home() {
             title={title}
             text={body}
             id={id}
+            isHome={true}
           />
           ))}
     </div>;

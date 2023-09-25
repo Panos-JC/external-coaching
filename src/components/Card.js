@@ -7,7 +7,7 @@ import { FaRegComment } from 'react-icons/fa';
 import { MdVerified, MdArrowForwardIos } from 'react-icons/md';
 
 
-function Card({title, text, id, username, fullname}) {
+function Card({title, text, id, username, fullname, num, isHome}) {
     return (
     <div className="card">
 
@@ -47,8 +47,9 @@ function Card({title, text, id, username, fullname}) {
 
       <Link to={`/post/${id}`}>
         <div className='comments-info'>
-              <p className='people'><FaRegComment className="comments"/>28 people are talking about this</p>
-              <MdArrowForwardIos className="arrow"/>
+              <p className='people'><FaRegComment className="comments"/>{isHome ? `View comments for this tweet` : `${num} people are talking about this`}</p>
+              {isHome ? <MdArrowForwardIos className="arrow"/> : ''}
+              
         </div>
         </Link>
     </div>
