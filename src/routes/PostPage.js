@@ -68,8 +68,8 @@ function PostPage() {
 
     return <div className="App">
           <Card
-            fullname={findFullname(users, post.id)}
-            username={findUsername(users, post.id)}
+            fullname={findFullname(users, post.userId)}
+            username={findUsername(users, post.userId)}
             title={post.title}
             text={post.body}
             id={post.id}
