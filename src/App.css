@@ -1,7 +1,7 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
-.App {
+.App, .outer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,6 +11,24 @@
 .card {
     width: 300px;
     height: 450px;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #E6E6E6;
+    border-radius: 10px;
+    transition: transform .4s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card1 {
+    width: 600px;
+    height: auto;
     margin-top: 20px;
     border-radius: 20px;
     padding: 2rem;
@@ -61,4 +79,9 @@
 .price {
     font-weight: 600;
     font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

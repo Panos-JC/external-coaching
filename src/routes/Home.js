@@ -26,6 +26,7 @@ function Home() {
                 products.map(
                     (product) => (
                         <ProductCard
+                            id={product.id}
                             title={product.title}
                             imageURL={product.image}
                             price={product.price}
