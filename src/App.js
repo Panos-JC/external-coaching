@@ -3,13 +3,12 @@ import Home from "./routes/Home";
 import ItemPage from "./routes/ItemPage";
 // import PostPage from './routes/PostPage';
 // import UserPage from './routes/UserPage';
-import withWidth from "./withWidth";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/1" element={<ItemPage />} />
+      <Route path="/item/:id" element={<ItemPage />} />
     </Routes>
   );
 }

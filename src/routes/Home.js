@@ -4,10 +4,11 @@ import { useEffect } from "react";
 import { useState } from "react";
 import withWidth from "../withWidth";
 
-function Home({ width }) {
+function Home({ width, route }) {
   const [products, setProducts] = useState([]);
 
-  console.log("WIDTH FROM HOME:", width);
+  // console.log("WIDTH FROM HOME:", width);
+  console.log(route.pathname)
 
   useEffect(() => {
     // Retrieve products data
